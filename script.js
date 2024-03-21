@@ -52,13 +52,20 @@ async function checkWeather(city) {
     
 }
 
-searchBtn.addEventListener("click", ()=>{
-    checkWeather(searchBox.value);
-})
+searchBtn.addEventListener("click", () => {
+    const cityName = searchBox.value.trim(); // Trim the input value
+    if (cityName !== "") { // Check if the trimmed value is not empty
+        checkWeather(cityName);
+    }
+});
+
 
 searchBox.addEventListener("keypress", (event) => {
-    // Check if the key pressed is Enter (key code 13)
-    if (event.key === "Enter") {
-        checkWeather(searchBox.value);
+    if(event.key === "Enter"){
+        // Check if the key pressed is Enter (key code 13)
+        const cityName = searchBox.value.trim(); // Trim the input value
+        if (cityName !== "") { // Check if the trimmed value is not empty
+            checkWeather(cityName);
+        }
     }
 });
