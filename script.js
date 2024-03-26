@@ -57,6 +57,8 @@ searchBtn.addEventListener("click", () => {
     if (cityName !== "") { // Check if the trimmed value is not empty
         checkWeather(cityName);
     }
+    searchBox.value = "";
+
 });
 
 
@@ -67,5 +69,6 @@ searchBox.addEventListener("keypress", (event) => {
         if (cityName !== "") { // Check if the trimmed value is not empty
             checkWeather(cityName);
         }
+        searchBox.value = "";
     }
 });
