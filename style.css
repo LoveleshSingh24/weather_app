@@ -124,3 +124,14 @@ img{
     margin-top: 10px;
     display: none;
 }
+@media screen and (max-width:434px) {
+    .search button img{
+        width:20px;
+        height: 20px;
+    }
+    .search button{
+        width: 120px;
+        height: 54px;
+        border-radius: 50%;
+    }
+}
